@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Build'){
             steps{
+                git branch: 'main', credentialsId: 'b6166a24-55a9-4fec-bcd4-5ff8a46f08b1', url: 'https://github.com/Amardeep51/PipelineProjectDemo2.git'
                 bat 'python Mytest.py'
                 echo " Build successful, now for testing"
             }
