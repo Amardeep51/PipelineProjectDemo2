@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Build'){
             steps{
+                bat 'python Mytest.py'
                 echo " Build successful, now for testing"
             }
         }
