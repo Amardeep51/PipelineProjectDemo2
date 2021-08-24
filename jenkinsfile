@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo "This is the Checkout part of the pipeline"
+            }
+        }
+        stage('Build'){
+            steps{
+                echo " Build successful, now for testing"
+            }
+        }
+        stage('Test'){
+            steps{
+                echo "Test completed successfully!"
+            }
+        }
+    }
+}
